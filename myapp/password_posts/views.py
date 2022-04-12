@@ -18,3 +18,10 @@ def create_post():
         print('Password Post was created')
         return redirect(url_for('core.index'))
     return render_template('create_password_post.html', form=form)
+
+# Make sure the password_post_id is an integer!
+
+@password_posts.route('/<int:password_post_id>')
+def password_post(password_post_id):
+    password_post = PasswordVault.query.get_or_404(password_post_id) 
+    return render_template('password_post.html', title=password_post.title, date=password_post.date, post=password_post)
