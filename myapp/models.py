@@ -34,7 +34,7 @@ class User(db.Model, UserMixin):
         return f"Username {self.username}"
 
 class PasswordVault(db.Model):
-    __tablename__ = 'password_vault'
+    __tablename__ = 'password_posts'
     id = db.Column(db.Integer, primary_key=True)
     date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     title = db.Column(db.String(140), nullable=False)
@@ -47,5 +47,5 @@ class PasswordVault(db.Model):
         self.user_id = user_id
     
     def __repr__(self):
-        return f"PasswordVault ID: {self.id} -- Date: {self.date} --- Title: {self.Title}"
+        return f"Post ID: {self.id} -- Date: {self.date} --- Title: {self.Title}"
 
