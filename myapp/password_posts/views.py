@@ -48,3 +48,17 @@ def update(password_post_id):
         form.text.data = password_post.text
 
     return render_template('create_post.html',title='Updating',form=form)
+
+
+@password_posts.route('/<int:password_post_id>/delete',methods=['GET','POST'])
+@login_required
+def delete_post(password_post_id):
+
+    password_post = PasswordVault.query.get_or_404(password_post_id)
+    if password_post.author != current_user:
+        abort(403)
+
+    db.session.delete(password_post)
+    db.session.commit()
+    flash('password Post Deleted')
+    return redirect(url_for('core.index'))
