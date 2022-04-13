@@ -37,15 +37,17 @@ class PasswordVault(db.Model):
     __tablename__ = 'password_posts'
     id = db.Column(db.Integer, primary_key=True)
     date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
-    title = db.Column(db.String(140), nullable=False)
-    text = db.Column(db.Text, nullable=False)
+    company = db.Column(db.String(140), nullable=False)
+    user_name = db.Column(db.Text, nullable=False)
+    pword = db.Column(db.Text, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
 
-    def __init__(self, title, text, user_id):
-        self.title = title
-        self.text = text
+    def __init__(self, company, user_name, pword, user_id):
+        self.company = company
+        self.user_name = user_name
+        self.pword = pword
         self.user_id = user_id
     
     def __repr__(self):
-        return f"Post ID: {self.id} -- Date: {self.date} --- Title: {self.Title}"
+        return f"Post ID: {self.id} -- Date: {self.date} --- Company: {self.Company}"
 

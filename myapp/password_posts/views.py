@@ -11,7 +11,7 @@ password_posts = Blueprint('password_posts', __name__)
 def create_post():
     form = PasswordPostForm()
     if form.validate_on_submit():
-        password_post = PasswordVault(title=form.title.data, text=form.text.data, user_id=current_user.id)
+        password_post = PasswordVault(company=form.company.data, user_name=form.user_name.data, pword=form.pword.data, user_id=current_user.id)
         db.session.add(password_post)
         db.session.commit()
         flash('Password Post was Created')
@@ -24,7 +24,7 @@ def create_post():
 @password_posts.route('/<int:password_post_id>')
 def password_post(password_post_id):
     password_post = PasswordVault.query.get_or_404(password_post_id) 
-    return render_template('password_post.html', title=password_post.title, date=password_post.date, post=password_post)
+    return render_template('password.html', company=password_post.company, date=password_post.date, post=password_post)
 
 @password_posts.route('/<int:password_post_id>/update',methods=['GET','POST'])
 @login_required
@@ -37,15 +37,17 @@ def update(password_post_id):
     form = PasswordPostForm()
 
     if form.validate_on_submit():
-        password_post.title = form.title.data
-        password_post.text = form.text.data
+        password_post.company = form.company.data
+        password_post.user_name = form.user_name.data
+        password_post.pword = form.pword.data
         db.session.commit()
         flash('password Post Updated')
         return redirect(url_for('password_posts.password_post',password_post_id=password_post.id))
 
     elif request.method == 'GET':
-        form.title.data = password_post.title
-        form.text.data = password_post.text
+        form.company.data = password_post.company
+        form.user_name.data = password_post.user_name
+        form.pword.data = password_post.pword
 
     return render_template('create_password.html',title='Updating',form=form)
 
