@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  background-color:ghostwhite;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  background-color:rgb(25, 31, 82);
+}
+
+.nav a {
+  color: ghostwhite;
+}
