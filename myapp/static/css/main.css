@@ -71,22 +71,45 @@ body {
   color: rgb(25, 31, 82);
 }
 
+.formlabel, .loginlabel, .accountlabel, .reglabel {
+  position: relative;
+  right: 25px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.loginlabel, .accountlabel, .reglabel {
+  position:fixed;
+  right: 56%;
+}
+
+
 input{
   color: rgb(25, 31, 82);
   border: 2px solid rgb(25, 31, 82);
   border-radius: 6px;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 0;
-  width: 200px
+  width: 220px;
+  text-align: center;
 }
 
-.add-btn, .update-user-btn {
+.add-btn, .update-user-btn, .login-user-btn, .reg-user-btn {
   background-color: rgb(25, 31, 82);
   color: ghostwhite;
   border: 2px solid white;
-  border-radius: 10px;
+  border-radius: 12px;
   font-size: 1.2rem;
-  width: 8%;
+  font-style: italic;
+  width: 120px;
+}
+
+
+.add-btn {
+  position:relative;
+  left: 220%;
+  bottom: 395%;
 }
 
 .delete-btn {
@@ -113,3 +136,23 @@ input{
   border-radius: 6px;
   font-size: 1rem;
 }
+
+.login-user-btn {
+  position:relative;
+  left: 230px;
+  bottom: 100px;
+}
+
+.reg-user-btn {
+  position: relative;
+  left: 240px;
+  bottom: 155px;
+}
+
+.update-user-btn {
+  position: relative;
+  left: 220px;
+  bottom: 100px;
+}
+
+
