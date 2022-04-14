@@ -1,7 +1,15 @@
+html {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  background-color:ghostwhite;
+  background-color:rgb(206, 206, 206);
   font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.jumbotron {
+  text-align: center;
 }
 
 .nav {
@@ -12,4 +20,65 @@ body {
 
 .nav a {
   color: ghostwhite;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.card{
+  display: grid;
+  place-items: center;
+  width: 400px;
+  height: 150px;
+  margin: 4%;
+  border-bottom: 1px solid lightgrey;
+}
+
+form {
+  display:flex;
+}
+
+form * {
+  padding: 2px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+input{
+  text-align: center;
+  color: rgb(25, 31, 82);
+  border: 2px solid rgb(25, 31, 82);
+  border-radius: 6px;
+}
+
+.form-control-label, .form-group  {
+  font-style: italic;
+  color: rgb(25, 31, 82);
+}
+
+.add-btn, .update-user-btn, .register-user-btn {
+  position: absolute;
+  top: 25%;
+  left: 46%;
+  background-color: rgb(25, 31, 82);
+  color: ghostwhite;
+  border: 2px solid white;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  width: 8%;
+}
+
+.update-user-btn {
+  position: absolute;
+  top: 200px;
+  left: 960px;
+}
+
+.register-user-btn {
+  top: 275px;
 }

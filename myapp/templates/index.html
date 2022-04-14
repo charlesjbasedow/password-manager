@@ -1,18 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="jumbotron">
-        <h1>Password Vault</h1>
-    </div>
     {% if current_user.is_authenticated %}
     <div class="container">
         {% for post in password_posts.items %}
             <div class="card">
-                <div class="car-boy">
-                    <h2>
-                        <a class="card-title" href="{{url_for('password_posts.password_post', password_post_id=post.id)}}">{{post.company}}</a>
-                    </h2>
-                    <a class="btn btn-primary" href="{{url_for('password_posts.password_post', password_post_id=post.id)}}">Get Password</a>
-                </div>
+                    <div>
+                        <p class="card-title" >Company: {{post.company}}</p>
+                        <p class="card-title" >Username: {{post.user_name}}</p>
+                        <p class="card-title" >Password: {{post.pword}}</p>
+                        <a class="edit-btn" href="{{url_for('password_posts.password_post', password_post_id=post.id)}}">Edit</a>
+                    </div>
             </div>
         {% endfor %}
         {% endif %}

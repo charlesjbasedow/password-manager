@@ -4,6 +4,6 @@ from wtforms.validators import DataRequired
 
 class PasswordPostForm(FlaskForm):
     company = StringField('Company', validators=[DataRequired()])
-    user_name = TextAreaField('Username', validators=[DataRequired()])
-    pword = TextAreaField('Password', validators=[DataRequired()])
-    submit = SubmitField('Add')
+    user_name = StringField('Username', validators=[DataRequired()])
+    pword = StringField('Password', validators=[DataRequired()])
+    submit = SubmitField('Create')
