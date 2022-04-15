@@ -3,6 +3,7 @@
     {% if current_user.is_authenticated %}
     <div class="card-container">
         {% for post in password_posts.items %}
+            {% if current_user.id == post.user_id %}
             <div class="card">
                     <div>
                         <p class="card-title" ><strong>Company</strong>: {{post.company}}</p>
@@ -13,6 +14,7 @@
                         <a class="edit-btn" href="{{url_for('password_posts.password_post', password_post_id=post.id)}}">Edit</a>
                     </div>
             </div>
+        {% endif %}
         {% endfor %}
         {% endif %}
     </div>
