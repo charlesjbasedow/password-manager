@@ -8,7 +8,7 @@ Access the app [here](https://cb-password-vault.herokuapp.com/)
 
 # Screenshot
 
-<img src = "myapp/static/images/passwordvaultss.png">
+<img src = "myapp/static/images/screenshot.png">
 
 
 # Technologies Used
