@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  background-color:rgb(206, 206, 206);
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  background: linear-gradient(270deg ,#cecece , #191F52 130% );
+  font-family:'Courier New', Courier, monospace
 }
 
 .container {
@@ -31,6 +31,7 @@ body {
 .nav a {
   color: ghostwhite;
   text-decoration: none;
+  font-size: 1.1rem;
 }
 
 .card{
@@ -39,6 +40,9 @@ body {
   height: 150px;
   background-color: rgb(236, 234, 234);
   box-shadow: 0 0 15px rgb(25, 31, 82);
+  border-radius: 4%;
+  font-size: 1.1rem;
+  font-family:'Courier New', Courier, monospace, monospace;
 }
 
 
@@ -50,9 +54,10 @@ body {
 }
 
 .edit-btn {
-  margin-left: 89%;
+  margin-left: 87%;
   margin-bottom: 5%;
   color: rgb(25, 31, 82);
+  font-weight: bold;
 }
 
 
@@ -64,6 +69,29 @@ body {
   margin-bottom: 2rem;
   font-size: 1rem;
   border-radius: 8px;
+  width: 400px;
+}
+
+input{
+  color: rgb(25, 31, 82);
+  border: 2px solid rgb(25, 31, 82);
+  border-radius: 6px;
+  font-size: 1.1rem;
+  padding: 4px;
+  width: 250px;
+  text-align: center;
+}
+
+#email {
+  margin-left: 7%;
+}
+
+#pass_confirm {
+  margin-left: -9%;
+}
+
+#company {
+  margin-left: 2%;
 }
 
 .form-control-label, .form-group  {
@@ -73,86 +101,67 @@ body {
 
 .formlabel, .loginlabel, .accountlabel, .reglabel {
   position: relative;
-  right: 25px;
+  right: 40px;
   font-weight: bold;
   font-style: italic;
+  font-size: 1.3rem;
 }
 
-.loginlabel, .accountlabel, .reglabel {
-  position:fixed;
-  right: 56%;
-}
-
-
-input{
-  color: rgb(25, 31, 82);
-  border: 2px solid rgb(25, 31, 82);
-  border-radius: 6px;
-  font-size: 1.2rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  padding: 0;
-  width: 220px;
-  text-align: center;
-}
 
 .add-btn, .update-user-btn, .login-user-btn, .reg-user-btn {
   background-color: rgb(25, 31, 82);
   color: ghostwhite;
-  border: 2px solid white;
+  border: 1px solid white;
   border-radius: 12px;
   font-size: 1.2rem;
-  font-style: italic;
   width: 120px;
 }
 
 
 .add-btn {
   position:relative;
-  left: 220%;
-  bottom: 395%;
-}
+  left: 50px;
+  }
 
 .delete-btn {
   font-size: 1rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   width: 90px;
   height: 34px;
   background-color: red;
   color: ghostwhite;
-  position: fixed;
-  top: 33%;
-  right: 42%;
+  position: relative;
+  bottom: 13px;
+  left: 240px;
   border: none;
 }
 
 .btn {
   width: 90px;
-  position: fixed;
-  top: 33%;
-  left: 42%;
+  position: relative;
+  top: 20px;
+  left: 60px;
   background-color: rgb(25, 31, 82);
   color: ghostwhite;
   font-size: 1rem;
   border-radius: 6px;
   font-size: 1rem;
+  padding: 4px;
 }
 
-.login-user-btn {
-  position:relative;
-  left: 230px;
-  bottom: 100px;
+.login-user-btn, .reg-user-btn {
+  position: relative;
+  left: 55px;
+  width: 160px;
 }
 
 .reg-user-btn {
-  position: relative;
-  left: 240px;
-  bottom: 155px;
+  left: 50px;
+  top: 30px;
 }
 
 .update-user-btn {
-  position: relative;
-  left: 220px;
-  bottom: 100px;
+position: relative;
+left: 50px;
 }
 
 
